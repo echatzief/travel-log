@@ -5,6 +5,8 @@ const helmet = require('helmet')
 const cors = require('cors')
 require('dotenv').config()
 const logs = require('./api/logs')
+const log = require('./api/log')
+const upload = require('./api/upload')
 const middlewares = require('./middlewares')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -25,14 +27,10 @@ app.use(cors({
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/', async (req, res) => {
-  res.json({
-    message: 'Hello World'
-  })
-})
-
 // Include the router
+app.use('/api', log)
 app.use('/api/logs', logs)
+app.use('/api/upload', upload)
 
 // Error handling middlewares
 app.use(middlewares.notFound)

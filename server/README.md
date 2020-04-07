@@ -7,6 +7,6 @@
 * Image - Text - URL
 * Latitude - Number
 * Longitude - Number
-* vititDate
+* visitDate
 * cAt - DateTime
 * uAt - DateTime
