@@ -42,7 +42,6 @@ export default {
             dropOptions:{
                 url:`${process.env.VUE_APP_BACK_API+"/api/upload/img"}`,
                 maxFiles:1,
-                addRemoveLinks: true,
             },
             newPoint:null
         }
