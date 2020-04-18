@@ -10,8 +10,8 @@ An app that you can pick a place on the map and add a point tha includes informa
 - cd server && npm install
 
 # Getting started  
-- cd client && npm start
-- cd server && npm run serve
+- cd client && npm run serve
+- cd server && npm start
 
 # Build With
 - NodeJS - Backend Technology
