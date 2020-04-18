@@ -4,3 +4,6 @@ html,body{
     font-size:1.1em;
     color:#fff;
 }
+.dz-success-mark,.dz-error-mark{
+    display: none;
+}

@@ -4,9 +4,9 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 const cors = require('cors')
 require('dotenv').config()
-const logs = require('./api/logs')
 const log = require('./api/log')
 const upload = require('./api/upload')
+const images = require('./api/images')
 const middlewares = require('./middlewares')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -29,7 +29,7 @@ app.use(bodyParser.json())
 
 // Include the router
 app.use('/api', log)
-app.use('/api/logs', logs)
+app.use('/api', images)
 app.use('/api/upload', upload)
 
 // Error handling middlewares
